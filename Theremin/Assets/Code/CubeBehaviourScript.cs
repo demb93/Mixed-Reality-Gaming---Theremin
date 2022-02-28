@@ -6,7 +6,7 @@ using System;
 
 public class CubeBehaviourScript : MonoBehaviour
 {
-    float Geschwindigkeit = 1.0f;
+    float Geschwindigkeit = 1.5f;
     public Material cube_mat_start;
     public Material cube_mat_treffer;
     public AudioSource audioTheremin;

@@ -11,7 +11,7 @@ using System.IO.Ports; // Serial Communication
 
 public class SerialCom : MonoBehaviour
 {
-    public string port = "COM3";
+    public string port = "COM5";
     public int baudrate = 9600;
     private SerialPort sp;
     public GameObject sph;
@@ -90,7 +90,7 @@ public class SerialCom : MonoBehaviour
             float t = Mathf.InverseLerp(min_dist, max_dist, x);
             sphereXPosition = Mathf.Lerp(-0.35f, 0.35f, t);
             float c = Mathf.InverseLerp(min_dist, max_dist, y);
-            sphereYPosition = Mathf.Lerp(0.07f, 0.35f, c);
+            sphereYPosition = Mathf.Lerp(0.07f, 0.4f, c);
             sph.transform.localPosition = new Vector3(sphereXPosition, sphereYPosition, zPosition);
 
 

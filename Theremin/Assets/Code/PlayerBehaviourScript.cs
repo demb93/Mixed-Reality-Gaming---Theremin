@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerBehaviourScript : MonoBehaviour
 {
     public int PlayerScore;
+    public int Max_Score;
     //public text highscoreText;
     public Text scoreText;
     int highscore;
@@ -14,6 +15,8 @@ public class PlayerBehaviourScript : MonoBehaviour
     void Start()
     {
         PlayerScore = 0;
+        PlayerPrefs.SetInt("highscore", PlayerScore);
+        PlayerPrefs.SetInt("Max_Score", Max_Score);
     }
 
     // Update is called once per frame
@@ -28,8 +31,10 @@ public class PlayerBehaviourScript : MonoBehaviour
         PlayerScore++;
         scoreText.text = "Score: "+PlayerScore;
         Debug.Log("PlayerScore: "+PlayerScore);
+        Debug.Log("PlayerScore_max: "+Max_Score);
 
         PlayerPrefs.SetInt("highscore", PlayerScore);
+        PlayerPrefs.SetInt("Max_Score", Max_Score);
         //highscoreText.text = PlayerPrefs.GetInt("highscore").ToString();
 
     }
@@ -40,7 +45,7 @@ public class PlayerBehaviourScript : MonoBehaviour
         if (collision.gameObject.tag == "SoundCubeTag")
         {
             Debug.Log("Treffer ");
-            PlayerScoreCount();
+            
         }
     }
     void OnCollisionExit(Collision collision)
@@ -48,6 +53,7 @@ public class PlayerBehaviourScript : MonoBehaviour
         if (collision.gameObject.tag == "SoundCubeTag")
         { 
             Destroy (collision.gameObject);
+            PlayerScoreCount();
         }
     }
 }

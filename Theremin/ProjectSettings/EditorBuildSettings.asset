@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Alle meine Entchen.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: "Assets/Scenes/H\xE4nschen_klein.unity"
+    guid: 1eb5f2540189a424fb871bcbdeb12457
+  - enabled: 1
+    path: "Assets/Scenes/H\xE4nsel_und_Gretel.unity"
+    guid: 78b468e02e7a03a4ebc80e303ae683a0
+  - enabled: 1
     path: Assets/Scenes/HighScore.unity
     guid: d3dade82f37754543a2ba3716cb299b5
   m_configObjects: {}

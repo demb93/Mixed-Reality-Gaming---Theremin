@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour
     public Dropdown gameScene;
     string dropdownValue;
     int dropdownIndex;
+    
+    //PlayerBahaviourScript script;
 
     private void Start()
     {
@@ -30,6 +32,9 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         StartCoroutine(wait());
+        //script.PlayerScore = 0f;
+    
+
     }
 
     public void QuitGame()

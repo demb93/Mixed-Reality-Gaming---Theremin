@@ -9,7 +9,7 @@ using System;
 
 public class Highscore_page : MonoBehaviour
 {
-    private int score;
+    //private string score;
     public TMP_Text scoreText;
    
     //static void Start()
@@ -17,16 +17,19 @@ public class Highscore_page : MonoBehaviour
     {
         //score = script.PlayerScore;
         //scoreText.text = "Score: " + score;
-
-        scoreText.text = "Score: " + PlayerPrefs.GetInt("highscore").ToString();
+        //score = PlayerPrefs.GetInt("highscore").ToString();
+        scoreText.text = "Score: " + PlayerPrefs.GetInt("highscore").ToString() + " / " + PlayerPrefs.GetInt("Max_Score").ToString();
 
     }
     public void MainMenu()
     {
+        //scoreText.text = "Score: 0" + " / " + PlayerPrefs.GetInt("Max_Score").ToString();
+        //score = "0";
         SceneManager.LoadScene("Startmenü");
     }
     public void QuitGame()
     {
+        //score = "0"; 
         Application.Quit();
     }
 }

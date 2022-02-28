@@ -7,10 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class EndCubeBehaviourScript : MonoBehaviour
 {
-    float Geschwindigkeit = 1.0f;
+    float Geschwindigkeit = 1.5f;
     public Material cube_mat_start;
     public Material cube_mat_treffer;
-    public bool collision_detected_test;
 
     Renderer cubeandplayer; 
     
@@ -32,18 +31,18 @@ public class EndCubeBehaviourScript : MonoBehaviour
     // Start wenn Kollision erkannt wird  
     private void OnCollisionEnter (Collision collision)
     {
-        collision_detected_test = true;
-        
+ 
         //Material des Cubes ändern 
         cubeandplayer.material = cube_mat_treffer;
+        SceneManager.LoadScene("HighScore");
+        Debug.Log("ZIEL");
 
         //Abspielen des Tons (abhängig von der Position)
     }
 
-    void OnCollisionExit(Collision collision)
+    /*void OnCollisionExit(Collision collision)
     {
         SceneManager.LoadScene("HighScore");
-        collision_detected_test = false;
-    }
+    }*/
 
 }
